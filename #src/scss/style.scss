@@ -87,8 +87,9 @@ h6 {
 
 .header {
     &__container {
-        min-width: 1400px;
+        width: 100%;
         height: 768px;
+        margin: 0 auto;
     }
 
     &__body {
@@ -97,7 +98,7 @@ h6 {
     }
 
     &__heading {
-        flex: 1 1 30%;
+        flex: 1 0 30%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -132,52 +133,36 @@ h6 {
     }
 
     &__image {
-        flex: 1 1 50%;
+        flex: 1 0 50%;
         background: url("../img/header/h-image.jpg") no-repeat;
         background-size: 100% auto;
     }
 
     &__menu {
-        flex: 1 1 20%;
+        flex: 1 0 20%;
         background-color: #415167;
         display: flex;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
         position: relative;
     }
 
     &__nav-image {
-        display: block;
-        top: 90px;
-        left: 20px;
-        width: 20px;
-        height: 40px;
-        margin-top: 50px;
-        position: relative;
-        .ovals {
-            margin-left: 2px;
-        }
-    }
-    &__nav-image::after {
-        content: "1";
-        text-align: center;
-        padding-top: 2px;
-        color: #f9fbff;
-        font-family: Nunito;
-        font-size: 14px;
-        font-weight: 300;
-        display: block;
-        width: 17px;
-        height: 17px;
-        background: #c7a17a;
-        border-radius: 50%;
+        width: 40px;
         position: absolute;
-        top: -11px;
-        right: -10px;
+        bottom: 20px;
+        left: 20px;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__nav {
         p {
             margin-bottom: 40px;
+            padding-left: 20px;
         }
         align-self: center;
         color: #edf0f5;
@@ -189,9 +174,173 @@ h6 {
             font-weight: 300;
             color: #edf0f5;
             font-size: 16px;
+            padding: 20px;
         }
         ul li {
             margin-bottom: 30px;
+        }
+        ul li a:hover {
+            text-shadow: rgba(0, 0, 0, 0.6) 2px 2px 5px;
+        }
+    }
+}
+@media all and (min-width: 2560px) {
+    .header {
+        &__title {
+            font-size: 84px;
+        }
+        &__nav {
+            p {
+                margin-bottom: 50px;
+                padding-left: 30px;
+            }
+            font-size: 25px;
+
+            a {
+                font-size: 25px;
+                padding: 30px;
+            }
+        }
+        &__logo {
+            margin-top: 70px;
+            width: 220px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+@media all and (min-width: 1680px) {
+    .header {
+        &__title {
+            font-size: 64px;
+        }
+        &__nav {
+            p {
+                margin-bottom: 50px;
+                padding-left: 30px;
+            }
+            font-size: 20px;
+
+            a {
+                font-size: 20px;
+                padding: 30px;
+            }
+        }
+        &__logo {
+            margin-top: 70px;
+            width: 150px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+@media all and (max-width: 1440px) {
+    .header {
+        &__container {
+            height: 700px;
+        }
+    }
+}
+@media all and (max-width: 1285px) {
+    .header {
+        &__container {
+            height: 500px;
+        }
+        &__heading {
+            font-size: 48px;
+            margin-bottom: -30px;
+        }
+        &__nav {
+            p {
+                margin-bottom: 25px;
+            }
+            font-size: 16px;
+            a {
+                font-size: 14px;
+            }
+            ul li {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+@media all and (max-width: 1285px) {
+    .header {
+        &__heading {
+            font-size: 40px;
+            margin-bottom: -20px;
+        }
+    }
+}
+@media all and (max-width: 768px) {
+    .header {
+        &__container {
+            height: 500px;
+        }
+        &__logo {
+            width: 75px;
+        }
+        &__menu {
+            display: none;
+        }
+    }
+}
+@media all and (max-width: 610px) {
+    .header {
+        &__container {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        &__heading {
+            font-size: 32px;
+            margin: 0;
+            padding: 0;
+        }
+        &__logo {
+            padding: 5px 0;
+            margin: 0;
+            height: 40px;
+            width: 100%;
+            text-align: center;
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+        &__title {
+            width: 100px;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 10px;
+            position: absolute;
+            .white {
+                background: none;
+                padding: 0;
+                margin: 0;
+                color: white;
+            }
+        }
+        &__menu {
+            display: none;
+        }
+        &__image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/header/h-image.jpg");
+            background-size: 100% auto;
+            background-position: center;
+        }
+        &__body {
+            display: block;
+            flex-direction: column;
+        }
+
+        &__heading {
+            display: block;
         }
     }
 }
