@@ -1,6 +1,6 @@
-/*
+
 let header__burger = document.querySelector('.header__burger');
-let header_menu = document.querySelector('.header__nav');
+let header_menu = document.querySelector('.header__menu');
 let back = document.querySelector('body');
 let header__list = document.querySelector('.header__link');
 
@@ -10,8 +10,3 @@ header__burger.onclick = function () {
     back.classList.toggle('lock');
 }
 
-header__list.onclick = function () {
-    header__list.classList.remove('active');
-    back.classList.toggle('lock');
-}
-*/

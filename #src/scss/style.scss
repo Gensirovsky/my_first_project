@@ -176,6 +176,9 @@ h6 {
             font-size: 16px;
             padding: 20px;
         }
+        ul li.cart {
+            display: none;
+        }
         ul li {
             margin-bottom: 30px;
         }
@@ -276,20 +279,26 @@ h6 {
         }
     }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 910px) {
     .header {
         &__container {
-            height: 500px;
+            height: 420px;
         }
-        &__logo {
-            width: 75px;
+        &__heading {
+            font-size: 32px;
+            margin-bottom: -30px;
         }
-        &__menu {
-            display: none;
+        &__nav {
+            a {
+                font-size: 12px;
+            }
         }
     }
 }
-@media all and (max-width: 610px) {
+@media all and (max-width: 768px) {
+    body.lock {
+        overflow: hidden;
+    }
     .header {
         &__container {
             height: 100%;
@@ -302,20 +311,78 @@ h6 {
             padding: 0;
         }
         &__logo {
+            position: fixed;
+            z-index: 50;
             padding: 5px 0;
             margin: 0;
-            height: 40px;
+            height: 50px;
             width: 100%;
             text-align: center;
+            z-index: 120;
             img {
-                width: auto;
-                height: 100%;
+                display: none;
             }
+        }
+        &__logo::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("../img/header/revo_logo-opacity.png") no-repeat, rgba(255, 255, 255, 0.9);
+            background-size: auto 80%;
+            background-position: center;
+        }
+        &__burger {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 30px;
+            z-index: 120;
+            float: right;
+            margin: 5px 7px 0 0;
+        }
+        &__burger span {
+            position: absolute;
+            background-color: #415167;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            top: 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease 0s;
+        }
+        &__burger::before,
+        &__burger::after {
+            content: "";
+            background-color: #415167;
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            left: 0;
+            border-radius: 10px;
+            transition: all 0.3s ease 0s;
+        }
+        &__burger::before {
+            bottom: 1px;
+        }
+        &__burger::before {
+            top: 20px;
+        }
+        &__burger.active span {
+            background-color: #df2727;
+        }
+        &__burger.active::before,
+        &__burger.active::after {
+            content: "";
+            background-color: #df2727;
         }
         &__title {
             width: 100px;
             color: rgba(255, 255, 255, 0.7);
             margin: 10px;
+            margin-top: 50px;
             position: absolute;
             .white {
                 background: none;
@@ -324,9 +391,7 @@ h6 {
                 color: white;
             }
         }
-        &__menu {
-            display: none;
-        }
+
         &__image {
             width: 100%;
             height: 200px;
@@ -341,6 +406,49 @@ h6 {
 
         &__heading {
             display: block;
+        }
+        &__menu.active {
+            top: 0;
+        }
+        &__menu {
+            transition: all 0.3s ease 0s;
+            position: fixed;
+            overflow: auto;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #415167;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            a {
+                font-size: 24px;
+            }
+            ul li {
+                margin-bottom: 50px;
+            }
+            ul li:first-child {
+                margin-top: 30px;
+                margin-bottom: 60px;
+            }
+            ul li:last-child {
+                margin-bottom: 10px;
+            }
+            ul li.cart {
+                display: inline;
+            }
+            ul {
+                align-self: center;
+            }
+        }
+        &__nav-image {
+            display: none;
+        }
+        &__nav {
+            height: 100%;
+            display: flex;
+            align-items: space-between;
         }
     }
 }
