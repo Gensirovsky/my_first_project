@@ -84,11 +84,14 @@ h6 {
     }
 }
 @import "fonts";
-
+@import "content";
+body {
+    background: #f2f2f2;
+}
 .header {
     &__container {
         width: 100%;
-        height: 768px;
+        height: 80vh;
         margin: 0 auto;
     }
 
@@ -110,8 +113,8 @@ h6 {
     }
 
     &__logo {
-        margin-top: 70px;
-        width: 110px;
+        margin-top: 10vh;
+        width: 10vw;
         img {
             width: 100%;
             height: auto;
@@ -119,15 +122,17 @@ h6 {
     }
 
     &__title {
-        width: 100px;
+        width: 10vw;
         color: #415167;
         z-index: 3;
-        margin-bottom: 70px;
+        margin-bottom: 7vh;
+        font-size: 4vw;
+        margin-left: -2vw;
         .white {
             display: inline-block;
             background: #c7a17a;
-            padding: 10px;
-            margin-left: -10px;
+            padding: 2vh;
+            margin-left: -1.1vw;
             color: white;
         }
     }
@@ -149,152 +154,81 @@ h6 {
     }
 
     &__nav-image {
-        width: 40px;
+        width: 6vh;
         position: absolute;
-        bottom: 20px;
-        left: 20px;
+        bottom: 3vh;
+        left: 3vh;
         img {
             width: 100%;
             height: auto;
+        }
+        span {
+            display: inline-block;
+            position: absolute;
+            width: 1.7vw;
+            height: 1.7vw;
+            text-align: center;
+            line-height: 1.7vw;
+            background-color: #c7a17a;
+            border-radius: 50%;
+            color: #415167;
+            font-size: 2vh;
+            font-family: "Nunito";
+            font-weight: 600;
+            top: -0.3vw;
+            right: -0.6vw;
+            box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
         }
     }
 
     &__nav {
         p {
-            margin-bottom: 40px;
-            padding-left: 20px;
+            margin-bottom: 4vh;
+            padding-left: 2vh;
         }
         align-self: center;
         color: #edf0f5;
         font-family: Nunito;
-        font-size: 16px;
+        font-size: 5vh;
         font-weight: 700;
         a {
             font-family: "Nunito";
             font-weight: 300;
             color: #edf0f5;
-            font-size: 16px;
-            padding: 20px;
+            font-size: 2vh;
         }
         ul li.cart {
             display: none;
         }
         ul li {
-            margin-bottom: 30px;
+            //margin-bottom: 30px;
         }
         ul li a:hover {
             text-shadow: rgba(0, 0, 0, 0.6) 2px 2px 5px;
         }
     }
 }
-@media all and (min-width: 2560px) {
+@media (height: 1024px) and (width: 1336px) {
     .header {
-        &__title {
-            font-size: 84px;
+        &__image {
+            background-size: auto 100%;
         }
-        &__nav {
-            p {
-                margin-bottom: 50px;
-                padding-left: 30px;
-            }
-            font-size: 25px;
+        &__container {
+            width: 100%;
+            height: 5vh;
+            margin: 0 auto;
+        }
+    }
+}
 
-            a {
-                font-size: 25px;
-                padding: 30px;
-            }
-        }
-        &__logo {
-            margin-top: 70px;
-            width: 220px;
-            img {
-                width: 100%;
-                height: auto;
-            }
+@media (max-width: 1025px) and (min-height: 768px) {
+    .header {
+        &__image {
+            background-size: auto 100%;
         }
     }
 }
-@media all and (min-width: 1680px) {
-    .header {
-        &__title {
-            font-size: 64px;
-        }
-        &__nav {
-            p {
-                margin-bottom: 50px;
-                padding-left: 30px;
-            }
-            font-size: 20px;
 
-            a {
-                font-size: 20px;
-                padding: 30px;
-            }
-        }
-        &__logo {
-            margin-top: 70px;
-            width: 150px;
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
-    }
-}
-@media all and (max-width: 1440px) {
-    .header {
-        &__container {
-            height: 700px;
-        }
-    }
-}
-@media all and (max-width: 1285px) {
-    .header {
-        &__container {
-            height: 500px;
-        }
-        &__heading {
-            font-size: 48px;
-            margin-bottom: -30px;
-        }
-        &__nav {
-            p {
-                margin-bottom: 25px;
-            }
-            font-size: 16px;
-            a {
-                font-size: 14px;
-            }
-            ul li {
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
-@media all and (max-width: 1285px) {
-    .header {
-        &__heading {
-            font-size: 40px;
-            margin-bottom: -20px;
-        }
-    }
-}
-@media all and (max-width: 910px) {
-    .header {
-        &__container {
-            height: 420px;
-        }
-        &__heading {
-            font-size: 32px;
-            margin-bottom: -30px;
-        }
-        &__nav {
-            a {
-                font-size: 12px;
-            }
-        }
-    }
-}
 @media all and (max-width: 768px) {
     body.lock {
         overflow: hidden;

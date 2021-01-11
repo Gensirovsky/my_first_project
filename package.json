@@ -32,5 +32,14 @@
     "del": "^6.0.0",
     "gulp-webpcss": "^1.1.1",
     "mozjpeg": "^7.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gensirovsky/my_first_project.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Gensirovsky/my_first_project/issues"
+  },
+  "homepage": "https://github.com/Gensirovsky/my_first_project#readme"
 }
