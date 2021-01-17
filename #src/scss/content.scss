@@ -102,14 +102,6 @@ html {
         margin: 0 0 0 31vh;
         padding: 5vh 2vh 5vh 0;
     }
-
-    &__slider-price {
-        font-weight: 600;
-        font-size: 2.3vh;
-        color: #c7a17a;
-        margin-bottom: 1.5vh;
-    }
-
     &__slider-title,
     &__slider-details-title {
         font-weight: 700;
@@ -118,13 +110,10 @@ html {
     }
 
     &__slider-description {
-        font-weight: 300;
-        font-size: 2vh;
     }
     &__slider-details {
         position: absolute;
         top: -12vh;
-        //top: 28vh;
         transform: translateY(40vh);
         transition: transform 0.6s ease;
         right: 0;
@@ -144,20 +133,11 @@ html {
     }
 
     &__slider-buy {
-        font-size: 1.8vh;
-        font-weight: 700;
-        padding: 1vh 1.5vw;
-        background: #c7a17a;
-        border-radius: 1.5vw;
         position: absolute;
         bottom: 3vh;
     }
 
     &__slider-detail {
-        font-weight: 700;
-        font-size: 1.8vh;
-        padding: 1vh 1.5vw;
-        background: none;
         position: absolute;
         bottom: 3vh;
         right: 3vw;
@@ -200,21 +180,201 @@ html {
         display: flex;
         transition: transform 0.6s ease;
     }
+    &__giftset {
+        font-family: "Nunito";
+        font-weight: 600;
+        padding-top: 7vh;
+        height: 90vh;
+        position: relative;
+    }
+    &__giftset::after {
+        content: "";
+        height: 90vh;
+        width: 80vw;
+        background: #dbdee2;
+        position: absolute;
+        top: 0;
+        z-index: -100;
+    }
+    &____giftset-title {
+    }
+    &__giftset-wrapper {
+        width: 67vw;
+        height: 55vh;
+        margin: 5vh 8vw 0 0;
+        float: right;
+        background: #fbfbff;
+        position: relative;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    &__giftset-content {
+        display: flex;
+        height: 100%;
+        position: relative;
+    }
+    &__giftset-maincontent {
+        padding-left: 16vw;
+        padding-right: 3vw;
+        padding-top: 9vh;
+    }
+    &__giftset-image {
+        position: absolute;
+        height: 53vh;
+        left: -17vw;
+        top: 0;
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    &__giftset-content-title {
+        font-weight: 700;
+        font-size: 2.5vh;
+        color: #232c38;
+        margin-bottom: 2.5vh;
+    }
+
+    &__giftset-description {
+        color: #151d28;
+        font-weight: 300;
+        margin-bottom: 3vh;
+        line-height: 2.7vh;
+    }
+
+    &__giftset-plusinfo {
+        color: #415167;
+        //display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+        margin-bottom: 8vh;
+    }
+
+    &__giftset-plusinfo-first {
+        white-space: nowrap;
+        display: inline-block;
+        right: 0;
+        line-height: 2.7vh;
+        margin-right: 10vw;
+        font-size: 2vh;
+    }
+
+    &__giftset-plusinfo-first-image {
+        float: left;
+        width: 3vw;
+        margin-right: 0.7vw;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__giftset-slusinfo-title-light {
+        font-weight: 300;
+    }
+
+    &__giftset-plusinfo-second {
+        white-space: nowrap;
+        display: inline-block;
+        width: 40%;
+        line-height: 2.7vh;
+        font-size: 2vh;
+    }
+
+    &__giftset-plusinfo-second-image {
+        float: left;
+        width: 3vw;
+        margin-right: 0.7vw;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__giftset-buy {
+        margin-right: 12vw;
+    }
+
+    &__giftset-detail {
+    }
+    &__giftset-buttons li {
+        height: 33.33%;
+    }
+    &__giftset-buttons button {
+        background: none;
+        width: 4.5vw;
+        height: 100%;
+        color: #415167;
+        font-family: "Montserrat";
+        font-weight: 900;
+        font-size: 2.5vh;
+        transition: transform 0.6s ease;
+    }
+    &__giftset-buttons {
+        box-shadow: 20px 0 40px -20px #dbdee2 inset;
+    }
+    &__giftset-buttons li.active {
+        box-shadow: inset 2px 0px 0px 0px rgba(65, 81, 103, 0.3);
+        background-color: #fbfbff;
+    }
+    &__giftset-buttons li.inactive:hover {
+        box-shadow: inset 0px -2px 0px 0px rgba(65, 81, 103, 0.3);
+    }
+    &__giftset-buttons {
+        transition: transform 0.6s ease;
+    }
+    &__giftset-buttons a {
+        display: block;
+        color: #415167;
+        width: 3vw;
+    }
 }
 
+a {
+    text-decoration: none;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 2.3vh;
+    margin-bottom: 1.5vh;
+    color: #c7a17a;
+}
+.description {
+    font-weight: 300;
+    font-size: 2vh;
+}
 .title {
-    color: #415167;
     text-align: center;
     &__title--light {
         font-family: Nunito;
         font-size: 3vh;
         font-weight: 600;
+        color: #415167;
     }
     &__title--bold {
         font-family: Montserrat;
         font-weight: 900;
         font-size: 4.5vh;
+        color: #415167;
     }
+}
+.button-buy {
+    font-size: 1.8vh;
+    font-weight: 700;
+    padding: 1vh 1.5vw;
+    background: #c7a17a;
+    border-radius: 1.5vw;
+}
+
+.button-detail {
+    font-weight: 700;
+    font-size: 1.8vh;
+    padding: 1vh 1.5vw;
+    background: none;
 }
 
 .display-none {
@@ -234,6 +394,7 @@ html {
         box-shadow: none;
     }
 }
+
 @media (max-width: 1920px) and (max-height: 1200px) {
     .content {
         &__button-left,
