@@ -1,0 +1,14 @@
+footer {
+    background: #dbdee2;
+    font-family: Nunito;
+    font-weight: 300;
+    font-size: 2vh;
+}
+.footer {
+    height: 5vh;
+    &__content {
+        text-align: center;
+        line-height: 5vh;
+        color: #415167;
+    }
+}
